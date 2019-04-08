@@ -1,0 +1,38 @@
+USE [master]
+GO
+
+/****** Object:  Table [dbo].[Product]    Script Date: 07/04/2019 19:55:15 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Product](
+	[Id] [int] NULL,
+	[Name] [nvarchar](50) NULL,
+	[Price] [decimal](18, 0) NOT NULL,
+	[ImageUrl] [nvarchar](50) NOT NULL,
+	[LastPurchase] [datetime] NOT NULL,
+	[LastSale] [datetime] NOT NULL,
+	[IsAvailable] [bit] NOT NULL,
+	[Stock] [decimal](18, 0) NOT NULL,
+	[User] [nvarchar](50) NOT NULL
+) ON [PRIMARY]
+GO
+-------------------------------------------------------
+USE [master]
+GO
+
+/****** Object:  Table [dbo].[User]    Script Date: 07/04/2019 19:56:06 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[User](
+	[FirstName] [nvarchar](50) NOT NULL,
+	[LastName] [nvarchar](50) NOT NULL
+) ON [PRIMARY]
+GO
